@@ -1,0 +1,26 @@
+{
+  "name": "create-kenote-app",
+  "version": "1.0.0",
+  "description": "Create JavaScript applications.",
+  "preferGlobal": true,
+  "bin": {
+    "create-kenote-app": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "backpack build",
+    "postinstall": "npm run build"
+  },
+  "repository": "https://github.com/kenote/create-kenote-app.git",
+  "author": "thondery <thondery@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "backpack-core": "0.7.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.0",
+    "inquirer": "^6.2.0",
+    "ora": "^3.0.0",
+    "runscript": "^1.3.0",
+    "tty-table": "^2.6.9"
+  }
+}
