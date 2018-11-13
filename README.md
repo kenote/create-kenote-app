@@ -19,7 +19,7 @@ create-kenote-app ls --type vue
 add
 
 ```bash
-craete-kenote-app add <project-name>
+create-kenote-app add <project-name>
 ```
 
 help

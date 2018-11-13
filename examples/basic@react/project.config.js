@@ -6,7 +6,7 @@ module.exports = {
   outDir: 'dist',
   assetsDir: 'src/assets',
   publicPath: '',
-  devPort: 9091,
+  devPort: 9000,
   entry: {
     index: './index.js'
   },
