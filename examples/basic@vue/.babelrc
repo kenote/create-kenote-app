@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "ie9": true
+      },
+      "uglify": true
+    }],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-es2015-modules-commonjs",
+    "transform-vue-jsx",
+    "syntax-jsx",
+    "lodash"
+  ]
+}
