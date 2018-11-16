@@ -36,8 +36,8 @@ module.exports = {
   },
   htmlplugins: ['initialize.browser.js', 'initialize.browser.css'],
   copys: [
-    { from: 'kenote-react-utils/dist/initialze/browser.js', to: 'initialize.browser.js', context: '../node_modules/' },
-    { from: 'kenote-react-utils/dist/initialze/browser.css', to: 'initialize.browser.css', context: '../node_modules/' },
+    { from: 'kenote-react-utils/dist/initialize/browser.js', to: 'initialize.browser.js', context: '../node_modules/' },
+    { from: 'kenote-react-utils/dist/initialize/browser.css', to: 'initialize.browser.css', context: '../node_modules/' },
   ],
   environment: {
     api: {

@@ -1,6 +1,6 @@
 <template>
   <div id="root">
-    <initialize-component :animation="animation" :waitimes="waitimes">
+    <initialize-component :animation="animation" :waitimes="waitimes" :progress="progress">
       <router-view></router-view>
     </initialize-component>
   </div>
@@ -19,49 +19,21 @@ export default {
     return {
       animation: '',
       waitimes: 500,
+      progress: 60,
       ...initialOptions
     }
-  }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.progress = 80
+      setTimeout(() => {
+        this.progress = 100
+      }, 500)
+    }, 500)
+  },
 }
 </script>
 
 <style lang="scss" >
-html {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  //font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-#root, .app {
-  height: inherit;
-}
-
-h1 {
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-@keyframes hideMask {
-  0% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+@import './styles/common.scss'
 </style>

@@ -24,17 +24,27 @@ export default {
     waitimes: {
       type: Number,
       default: 500
+    },
+    progress: {
+      type: Number,
+      default: 60
     }
   },
   mounted () {
-    this.$store.dispatch('initialProgress', { pending: 65 })
-    .then( () => {
-      let { progress } = this.$store.state.initialize
-      return this.$store.dispatch('initialProgress', { pending: 100 })
-    })
-    .then( () => {
-      this.$store.dispatch('initialComplete', { times: this.waitimes })
-    })
+    this.$store.dispatch('initialProgress', { pending: this.progress })
   },
+  watch: {
+    progress (val) {
+      if (val >= 100) {
+        this.$store.dispatch('initialProgress', { pending: val })
+        .then( () => {
+          this.$store.dispatch('initialComplete', { times: this.waitimes })
+        })
+      }
+      else {
+        this.$store.dispatch('initialProgress', { pending: val })
+      }
+    }
+  }
 }
 </script>

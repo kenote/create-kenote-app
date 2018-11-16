@@ -1,0 +1,37 @@
+// ------------------------------------
+// Sass Style
+// ------------------------------------
+.page {
+  display: flex;
+  height: inherit;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+
+  h1 {
+    margin: auto;
+  }
+}
+
+@keyframes pageMask {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  20% {
+    opacity: .2;
+    margin-top: 0;
+  }
+  40% {
+    opacity: .4;
+  }
+  60% {
+    opacity: .6;
+  }
+  80% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

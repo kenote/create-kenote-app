@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "kenote-react-utils": "^1.0.0-beta.8",
+    "kenote-react-utils": "^1.0.0-beta.9",
     "localforage": "^1.7.3",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
@@ -31,6 +31,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "caniuse-lite": "^1.0.30000907",
     "clean-webpack-plugin": "^0.1.19",
     "codecov": "^3.1.0",
     "copy-webpack-plugin": "^4.6.0",
@@ -67,6 +68,7 @@
     "dll": "webpack --config webpack.dll.config.js --progress",
     "dev": "webpack-dev-server --config webpack.dev.config.js --progress",
     "build": "node ./compile.js",
+    "deploy": "node ./deploy.js",
     "test": "jest --u --colors --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "codecov": "jest --u --colors --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage && codecov"
   },

@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import * as Images from './assets/images'
-import * as utils from './utils'
+import * as Images from '../assets/images'
+import * as utils from '../utils'
 
 
 export default {

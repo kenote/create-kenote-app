@@ -3,6 +3,7 @@
 // ------------------------------------
 module.exports = {
   ['local']: {
+    name: '本地网络',
     environment: {
       api: {
         domain: 'http://192.168.1.214:7086', 

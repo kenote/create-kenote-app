@@ -4,7 +4,8 @@ import { Link, NavLink } from 'react-router-dom'
 import * as Images from '../assets/images'
 import './header.scss'
 import history from '../store/history'
-import * as utils from '../utils'
+import { isActiveLink } from 'kenote-react-utils'
+import { assetUrl } from '../utils'
 
 export default class Header extends PureComponent {
 
@@ -12,7 +13,7 @@ export default class Header extends PureComponent {
     return (
       <div className="layout-header">
         <div className="logo">
-          <img src={utils.assetUrl(Images.logo)} />
+          <img src={assetUrl(Images.logo)} />
         </div>
         <div className="nav">
           <ul>
@@ -25,4 +26,4 @@ export default class Header extends PureComponent {
   }
 }
 
-const activeClassName = linkname => utils.isActiveLink(linkname, history.location.pathname) ? 'active' : ''
+const activeClassName = linkname => isActiveLink(linkname, history.location.pathname) ? 'active' : ''

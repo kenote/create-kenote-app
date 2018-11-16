@@ -1721,6 +1721,11 @@ caniuse-lite@^1.0.30000844:
   resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000903.tgz#86d46227759279b3db345ddbe778335dbba9e858"
   integrity sha1-htRiJ3WSebPbNF3b53gzXbup6Fg=
 
+caniuse-lite@^1.0.30000907:
+  version "1.0.30000907"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000907.tgz#0b9899bde53fb1c30e214fb12402361e02ff5c42"
+  integrity sha512-No5sQ/OB2Nmka8MNOOM6nJx+Hxt6MQ6h7t7kgJFu9oTuwjykyKRSBP/+i/QAyFHxeHB+ddE0Da1CG5ihx9oehQ==
+
 capture-exit@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/capture-exit/download/capture-exit-1.2.0.tgz#1c5fcc489fd0ab00d4f1ac7ae1072e3173fbab6f"
@@ -4918,10 +4923,10 @@ kenote-deploy-kit@^1.1.0:
     scp2 "^0.5.0"
     url-parse-lax "^3.0.0"
 
-kenote-react-utils@^1.0.0-beta.8:
-  version "1.0.0-beta.8"
-  resolved "https://registry.npmjs.org/kenote-react-utils/-/kenote-react-utils-1.0.0-beta.8.tgz#b92c48245d28a8c7f3edc24f0e7bde17a25d9e6f"
-  integrity sha512-Dup2hEVX7D+icynx0guwaQMTr/GUjwvEQet7V+Jg6Vo+kthCTd6YdyE7h2BUDebldnyrhG/xP6JWrUgfxhyxAw==
+kenote-react-utils@^1.0.0-beta.9:
+  version "1.0.0-beta.9"
+  resolved "https://registry.npmjs.org/kenote-react-utils/-/kenote-react-utils-1.0.0-beta.9.tgz#4ec6a56d2ff01e3473367c4d63bb4f3466ea8ab1"
+  integrity sha512-gU4aA9BTPtBFs0bsNjHMOvn6NXFLmVCEnvndQ+FUm3rWt6mmkEZmdmi1Tr3Gq25xrIkJtv7iOXPpxllW+e/Bgg==
 
 killable@^1.0.0:
   version "1.0.1"

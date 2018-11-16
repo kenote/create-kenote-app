@@ -5,7 +5,7 @@ import App from './app.vue'
 import routes from './pages/router'
 import store from './store'
 import InitializeComponent from './utils/initialize/component.vue'
-import CoreLayout from './core-layout.vue'
+import CoreLayout from './layout/core-layout.vue'
 
 Vue.use(VueRouter)
 
@@ -14,7 +14,6 @@ Vue.component('core-layout', CoreLayout)
 
 window.start = () => {
   new Vue({
-    //el: '#root',
     router: new VueRouter({ 
       routes,
       mode: __DESKTOP__ ? 'hash' : 'history'
