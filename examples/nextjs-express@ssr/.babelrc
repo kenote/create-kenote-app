@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "styled-jsx": {
+          "plugins": [
+            "styled-jsx-plugin-sass"
+          ]
+        }
+      }
+    ],
+    "@zeit/next-typescript/babel"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators", 
+      { 
+        "legacy": true 
+      }
+    ]
+  ]
+}
