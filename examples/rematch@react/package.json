@@ -28,7 +28,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "json-loader": "^0.5.7",
-    "kenote-deploy-kit": "^1.1.0",
+    "kenote-deploy-kit": "^1.2.1",
     "lodash-webpack-plugin": "^0.11.5",
     "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.10.0",
@@ -63,7 +63,7 @@
     "dll": "webpack --config webpack.dll.config.js --progress",
     "dev": "webpack-dev-server --config webpack.dev.config.js --progress",
     "build": "node ./compile.js",
-    "deploy": "node ./deploy.js",
+    "deploy": "deploy-proxy",
     "test": "jest --u --colors --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "codecov": "jest --u --colors --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage && codecov"
   },
