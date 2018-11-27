@@ -14,7 +14,7 @@ program
 program
   .command('list')
   .alias('ls')
-  .option('--type <type-name>', 'Only relevant types are displayed', /^(react|vue)$/i, null)
+  .option('--type <type-name>', 'Only relevant types are displayed', /^(react|vue|ssr)$/i, null)
   .description('display boilerplate list.')
   .action( () => {
     Utils.showExamples(program.args[0].type)
@@ -22,7 +22,7 @@ program
 
 program
   .command('add <project-name>')
-  .option('--type <type-name>', 'Only relevant types are displayed', /^(react|vue)$/i, null)
+  .option('--type <type-name>', 'Only relevant types are displayed', /^(react|vue|ssr)$/i, null)
   .description('install boilerplate to project.')
   .action( (name) => {
     Utils.install(name, program.args[1].type)
