@@ -1,28 +1,33 @@
-
+import * as http from 'http'
 import * as express from 'express'
 import * as next from 'next'
+import * as bodyParser from 'body-parser'
+import * as methodOverride from 'method-override'
+import * as compress from 'compression'
 import pages from './routes/pages'
 import apiV1 from './routes/api_v1'
+import config from './config'
 
-const port: number = parseInt(process.env.PORT, 10) || 3000
 const dev: boolean = process.env.NODE_ENV !== 'production'
-const app: next.Server = next({ dev })
-const handle: Function = pages.getRequestHandler(app)
-const server: AppServer = express()
+const nextServer: next.Server = next({ dev })
+const nextHandle: Function = pages.getRequestHandler(nextServer)
+const app: any = express()
+const { HOST, PORT } = config
 
-interface AppServer extends Function {
-  use?: Function
-  listen?: Function
-}
-
-app.prepare()
+nextServer.prepare()
   .then(() => {
-    server.use('/api/v1', apiV1)
-    server.use(handle)
-
-    server.listen(port, (err) => {
+    app.use((<any>bodyParser).json({ limit: '1mb' }))
+    app.use((<any>bodyParser).urlencoded({ extended: true, limit: '1mb' }))
+    app.use(methodOverride())
+    app.use(compress())
+    // Routes
+    app.use('/api/v1', apiV1)
+    app.use(nextHandle)
+    // Server ...
+    let server: http.Server = http.createServer(app)
+    server.listen(PORT, HOST, (err) => {
       if (err) throw err
-      console.log(`> Ready on http://localhost:${port}`)
+      console.log(`Service running in %s environment, PORT: %d ...`, process.env.NODE_ENV || 'development', PORT)
     })
   })
 
