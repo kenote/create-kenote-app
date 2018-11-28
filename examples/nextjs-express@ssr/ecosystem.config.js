@@ -2,7 +2,7 @@
 module.exports = {
   apps : [
     {
-      name: 'app-name',
+      name: '<%= app_name %>',
       script: './.next/production-server/index.js',
       watch: true,
       max_memory_restart: '300M',

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import logo from '../static/images/logo.png'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux/lib'
 import { bindActionCreators } from 'redux'
 import { nextPageClick } from '../redux/action'
 
