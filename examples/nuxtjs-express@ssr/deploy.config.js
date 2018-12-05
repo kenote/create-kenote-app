@@ -35,7 +35,7 @@ module.exports = {
   ['local']: {
     name: '本地网络',
     sftp: {
-      server: 'root:vertexgame12@192.168.1.214:22',
+      server: 'root:password@192.168.1.214:22',
       workspace: __dirname,
       deployTo: '/path/to',
       patterns: ['.**/**', '**'],
