@@ -6,6 +6,7 @@ clear:
 	@rm -rf build
 	@rm -rf dist
 	@rm -rf node_modules
+	@rm -rf package-lock.json
 
 install:
 	@npm set registry https://registry.npm.taobao.org
