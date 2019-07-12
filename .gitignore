@@ -37,6 +37,9 @@ node_modules/
 jspm_packages/
 build/
 .DS_Store
+package-lock.json
+yarn.lock
+
 
 # TypeScript v1 declaration files
 typings/

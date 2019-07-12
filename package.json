@@ -1,10 +1,11 @@
 {
   "name": "create-kenote-app",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create JavaScript applications.",
   "preferGlobal": true,
   "bin": {
-    "create-kenote-app": "./bin/cli.js"
+    "create-kenote-app": "./bin/cli.js",
+    "ckapp": "./bin/cli.js"
   },
   "scripts": {
     "build": "backpack build",
